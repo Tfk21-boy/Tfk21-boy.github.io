@@ -165,7 +165,7 @@
             box-shadow: 0 8px 20px var(--shadow);
         }
         
-        /* Hero Section - FIXED */
+        /* Hero Section */
         .hero {
             padding: 180px 0 100px;
             min-height: 100vh;
@@ -291,7 +291,7 @@
             border-color: transparent;
         }
         
-        /* Foto Profil dengan Animasi */
+        /* Foto Profil */
         .profile-photo-container {
             position: relative;
             margin-bottom: 30px;
@@ -380,7 +380,7 @@
             z-index: 5;
         }
         
-        /* Data Diri Minimalis */
+        /* Data Diri */
         .minimalist-info {
             background: var(--card-bg);
             border-radius: 15px;
@@ -537,12 +537,20 @@
         
         .project-img {
             height: 220px;
-            background: var(--gradient);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .project-img-content {
+            width: 100%;
+            height: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             color: white;
             font-size: 3.5rem;
+            position: relative;
+            z-index: 2;
         }
         
         .project-content {
@@ -706,7 +714,7 @@
             color: var(--accent);
         }
         
-        /* Project Modal - FIXED */
+        /* Project Modal */
         .project-modal {
             display: none;
             position: fixed;
@@ -762,206 +770,6 @@
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
         
-        .modal-project-image {
-            width: 100%;
-            height: 300px;
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 25px;
-            background: var(--gradient-dark);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: var(--secondary);
-        }
-        
-        .modal-title-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            color: var(--light);
-        }
-        
-        .modal-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .modal-tag {
-            background: rgba(139, 0, 0, 0.2);
-            color: var(--secondary);
-            padding: 8px 18px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            border: 1px solid rgba(212, 175, 55, 0.3);
-        }
-        
-        .modal-body {
-            padding: 30px 40px 40px;
-        }
-        
-        .modal-section {
-            margin-bottom: 30px;
-        }
-        
-        .modal-section h3 {
-            font-size: 1.4rem;
-            margin-bottom: 15px;
-            color: var(--secondary);
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .modal-section p {
-            color: var(--accent);
-            line-height: 1.7;
-            font-size: 1.1rem;
-        }
-        
-        .tech-stack {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-        }
-        
-        .tech-item {
-            background: rgba(139, 0, 0, 0.1);
-            color: var(--light);
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 500;
-            border: 1px solid rgba(139, 0, 0, 0.3);
-        }
-        
-        #modalProjectFeatures {
-            list-style: none;
-            padding-left: 0;
-        }
-        
-        #modalProjectFeatures li {
-            color: var(--accent);
-            margin-bottom: 12px;
-            padding-left: 25px;
-            position: relative;
-            line-height: 1.6;
-        }
-        
-        #modalProjectFeatures li::before {
-            content: '▶';
-            position: absolute;
-            left: 0;
-            color: var(--secondary);
-            font-size: 0.8rem;
-        }
-        
-        .project-links {
-            display: flex;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        
-        .project-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 25px;
-            background: var(--gradient);
-            color: var(--light);
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .project-link:hover {
-            background: var(--gradient-gold);
-            transform: translateY(-3px);
-        }
-        
-        /* Responsive */
-        @media (max-width: 1100px) {
-            .hero-container {
-                flex-direction: column;
-                gap: 40px;
-            }
-            
-            .hero-side-profile {
-                display: flex;
-                justify-content: center;
-                gap: 40px;
-                align-items: center;
-            }
-            
-            .profile-photo-frame {
-                margin: 0;
-            }
-            
-            .minimalist-info {
-                margin: 0;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-            
-            .mobile-menu-btn {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .hero-side-profile {
-                flex-direction: column;
-                text-align: center;
-            }
-            
-            .profile-photo-frame {
-                width: 240px;
-                height: 240px;
-            }
-            
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-container {
-                flex-direction: column;
-            }
-            
-            .modal-content {
-                width: 95%;
-                margin: 20px auto;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .profile-photo-frame {
-                width: 200px;
-                height: 200px;
-            }
-            
-            .minimalist-info {
-                padding: 20px;
-                width: 100%;
-                max-width: 280px;
-            }
-            
-            .btn, .btn-outline {
-                padding: 14px 28px;
-                width: 100%;
-                margin-bottom: 15px;
-            }
-        }
-
         /* Project Carousel Styles */
         .project-carousel {
             width: 100%;
@@ -1091,22 +899,200 @@
             font-size: 0.9rem;
             z-index: 10;
         }
-
-        /* Auto-slide animation */
-        @keyframes slide {
-            0%, 20% { transform: translateX(0); }
-            25%, 45% { transform: translateX(-100%); }
-            50%, 70% { transform: translateX(-200%); }
-            75%, 95% { transform: translateX(-300%); }
-            100% { transform: translateX(-400%); }
+        
+        .modal-title-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--light);
         }
-
-        .carousel-slides.auto-slide {
-            animation: slide 20s infinite;
+        
+        .modal-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
         }
-
-        /* Responsive Carousel */
+        
+        .modal-tag {
+            background: rgba(139, 0, 0, 0.2);
+            color: var(--secondary);
+            padding: 8px 18px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border: 1px solid rgba(212, 175, 55, 0.3);
+        }
+        
+        .modal-body {
+            padding: 30px 40px 40px;
+        }
+        
+        .modal-section {
+            margin-bottom: 30px;
+        }
+        
+        .modal-section h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .modal-section p {
+            color: var(--accent);
+            line-height: 1.7;
+            font-size: 1.1rem;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .tech-item {
+            background: rgba(139, 0, 0, 0.1);
+            color: var(--light);
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 500;
+            border: 1px solid rgba(139, 0, 0, 0.3);
+        }
+        
+        #modalProjectFeatures {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        #modalProjectFeatures li {
+            color: var(--accent);
+            margin-bottom: 12px;
+            padding-left: 25px;
+            position: relative;
+            line-height: 1.6;
+        }
+        
+        #modalProjectFeatures li::before {
+            content: '▶';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-size: 0.8rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            background: var(--gradient);
+            color: var(--light);
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background: var(--gradient-gold);
+            transform: translateY(-3px);
+        }
+        
+        .image-count {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background: rgba(0,0,0,0.7);
+            color: var(--secondary);
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            z-index: 5;
+        }
+        
+        /* Responsive Navigation */
         @media (max-width: 768px) {
+            .nav-links {
+                position: fixed;
+                top: 100px;
+                left: 0;
+                width: 100%;
+                background: var(--card-bg);
+                flex-direction: column;
+                padding: 30px;
+                display: none;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+                border-top: 1px solid rgba(139, 0, 0, 0.3);
+                z-index: 999;
+            }
+            
+            .nav-links.active {
+                display: flex;
+            }
+            
+            .nav-links li {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .nav-links a {
+                display: block;
+                padding: 15px;
+                border-bottom: 1px solid rgba(139, 0, 0, 0.1);
+            }
+            
+            .nav-links a:last-child {
+                border-bottom: none;
+            }
+            
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-side-profile {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .profile-photo-frame {
+                width: 240px;
+                height: 240px;
+                margin: 0 auto;
+            }
+            
+            .minimalist-info {
+                margin: 0 auto;
+            }
+            
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-container {
+                flex-direction: column;
+            }
+            
+            .modal-content {
+                width: 95%;
+                margin: 20px auto;
+            }
+            
             .project-carousel {
                 height: 300px;
             }
@@ -1125,8 +1111,47 @@
                 right: 10px;
             }
         }
-
+        
+        @media (max-width: 1100px) {
+            .hero-container {
+                flex-direction: column;
+                gap: 40px;
+            }
+            
+            .hero-side-profile {
+                display: flex;
+                justify-content: center;
+                gap: 40px;
+                align-items: center;
+                width: 100%;
+            }
+        }
+        
         @media (max-width: 576px) {
+            .profile-photo-frame {
+                width: 200px;
+                height: 200px;
+            }
+            
+            .minimalist-info {
+                padding: 20px;
+                width: 100%;
+                max-width: 280px;
+            }
+            
+            .btn, .btn-outline {
+                padding: 14px 28px;
+                width: 100%;
+                margin-bottom: 15px;
+                margin-left: 0;
+            }
+            
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
+            
             .project-carousel {
                 height: 250px;
             }
@@ -1135,20 +1160,6 @@
                 font-size: 0.9rem;
                 padding: 8px;
             }
-        }
-
-        .image-count {
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-            background: rgba(0,0,0,0.7);
-            color: var(--secondary);
-            padding: 5px 10px;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 5px;
         }
     </style>
 </head>
@@ -1168,7 +1179,7 @@
         </div>
     </header>
 
-    <!-- Hero Section - FIXED -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
@@ -1184,7 +1195,7 @@
                 <div class="profile-photo-container">
                     <div class="profile-photo-frame">
                         <div class="profile-photo">
-                            <img src="21402051.jpg" alt="Foto Profil Muhammad Taufik">
+                            <img src="https://via.placeholder.com/300x300/8B0000/FFFFFF?text=MT" alt="Foto Profil Muhammad Taufik">
                             <div class="profile-crack-effect"></div>
                         </div>
                         <div class="photo-corner-decoration">
@@ -1269,10 +1280,15 @@
         <div class="container">
             <h2 class="section-title">MY <span>PROJECTS</span></h2>
             <div class="projects-grid">
-                <!-- Project 1 dengan Gambar -->
+                <!-- Project 1 -->
                 <div class="project-card" data-project="project1">
-                    <div class="project-img" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./projek1.png'); background-size: cover; background-position: center;">
-                        <i class="fas fa-chart-bar"></i>
+                    <div class="project-img">
+                        <div class="project-img-content" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'); background-size: cover; background-position: center;">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="image-count">
+                            <i class="fas fa-images"></i> 5 photos
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Data Analytics Dashboard</h3>
@@ -1285,10 +1301,15 @@
                     </div>
                 </div>
 
-                <!-- Project 2 dengan Gambar -->
+                <!-- Project 2 -->
                 <div class="project-card" data-project="project2">
-                    <div class="project-img" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./projek2.png'); background-size: cover; background-position: center;">
-                        <i class="fas fa-folder-open"></i>
+                    <div class="project-img">
+                        <div class="project-img-content" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1497636577773-f1231844b336?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80'); background-size: cover; background-position: center;">
+                            <i class="fas fa-folder-open"></i>
+                        </div>
+                        <div class="image-count">
+                            <i class="fas fa-images"></i> 5 photos
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Document Management System</h3>
@@ -1301,10 +1322,15 @@
                     </div>
                 </div>
 
-                <!-- Project 3 dengan Gambar -->
+                <!-- Project 3 -->
                 <div class="project-card" data-project="project3">
-                    <div class="project-img" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./projek3.png'); background-size: cover; background-position: center;">
-                        <i class="fas fa-cogs"></i>
+                    <div class="project-img">
+                        <div class="project-img-content" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80'); background-size: cover; background-position: center;">
+                            <i class="fas fa-cogs"></i>
+                        </div>
+                        <div class="image-count">
+                            <i class="fas fa-images"></i> 5 photos
+                        </div>
                     </div>
                     <div class="project-content">
                         <h3>Workflow Automation</h3>
@@ -1317,17 +1343,6 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Tambahkan indicator di project cards -->
-        <div class="project-card" data-project="project1">
-            <div class="project-img" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('./projek1-1.png');">
-                <i class="fas fa-chart-bar"></i>
-                <!-- Multiple images indicator -->
-                <div class="image-count">
-                    <i class="fas fa-images"></i> 5 photos
-                </div>
-            </div>
-            <!-- ... -->
         </div>
     </section>
 
@@ -1466,37 +1481,30 @@
         </div>
     </div>
 
-    <!-- Test Button -->
-    <div style="position: fixed; bottom: 20px; right: 20px; z-index: 100;">
-        <button onclick="testModal()" style="background: #D4AF37; color: black; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: bold;">
-            🧪 TEST MODAL
-        </button>
-    </div>
-
     <script>
-        // Projects Data - FIXED
+        // Projects Data
         const projects = {
             project1: {
                 title: "Data Analytics Dashboard",
                 images: [
                     {
-                        url: "./projek1-1.png",
+                        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Dashboard overview dengan data utama"
                     },
                     {
-                        url: "./projek1-2.png", 
+                        url: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1115&q=80", 
                         description: "Detail analytics dengan grafik interaktif"
                     },
                     {
-                        url: "./projek1-3.png",
+                        url: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Mobile responsive view"
                     },
                     {
-                        url: "./projek1-4.png",
+                        url: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Data export functionality"
                     },
                     {
-                        url: "./projek1-5.png",
+                        url: "https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80",
                         description: "User management panel"
                     }
                 ],
@@ -1519,23 +1527,23 @@
                 title: "Document Management System",
                 images: [
                     {
-                        url: "./projek2-1.jpg",
+                        url: "https://images.unsplash.com/photo-1497636577773-f1231844b336?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Main dashboard dengan document list"
                     },
                     {
-                        url: "./projek2-2.jpg",
+                        url: "https://images.unsplash.com/photo-1559757175-0eb30cd8c063?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80",
                         description: "Advanced search interface"
                     },
                     {
-                        url: "./projek2-3.jpg",
+                        url: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Document preview dan editing"
                     },
                     {
-                        url: "./projek2-4.jpg",
+                        url: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
                         description: "User permission settings"
                     },
                     {
-                        url: "./projek2-5.jpg",
+                        url: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Audit trail dan version history"
                     }
                 ],
@@ -1557,23 +1565,23 @@
                 title: "Workflow Automation System",
                 images: [
                     {
-                        url: "./projek3-1.jpg",
+                        url: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80",
                         description: "Workflow builder dengan drag & drop"
                     },
                     {
-                        url: "./projek3-2.jpg",
+                        url: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Automation rules configuration"
                     },
                     {
-                        url: "./projek3-3.jpg",
+                        url: "https://images.unsplash.com/photo-1533750349088-cd871a92f312?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Real-time notifications panel"
                     },
                     {
-                        url: "./projek3-4.jpg",
+                        url: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
                         description: "Analytics dan performance dashboard"
                     },
                     {
-                        url: "./projek3-5.jpg",
+                        url: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80",
                         description: "Integration settings dengan third-party apps"
                     }
                 ],
@@ -1619,6 +1627,9 @@
                 const img = document.createElement('img');
                 img.src = image.url;
                 img.alt = `Project image ${index + 1}`;
+                img.onerror = function() {
+                    this.src = 'https://via.placeholder.com/900x400/8B0000/FFFFFF?text=Project+Image';
+                };
                 
                 const overlay = document.createElement('div');
                 overlay.className = 'slide-overlay';
@@ -1707,7 +1718,7 @@
             }
         }
 
-        // Updated Modal Function
+        // Modal Functions
         function openProjectModal(projectId) {
             console.log("Opening modal for:", projectId);
             
@@ -1793,9 +1804,85 @@
             stopAutoSlide();
         }
 
-        // Event Listeners for Carousel
+        // Event Listeners
         document.addEventListener('DOMContentLoaded', function() {
-            // Previous/Next buttons
+            console.log("Portfolio loaded successfully!");
+            
+            // Event listeners untuk project cards
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const projectId = this.getAttribute('data-project');
+                    console.log("Project clicked:", projectId);
+                    
+                    if (projectId && projects[projectId]) {
+                        openProjectModal(projectId);
+                    } else {
+                        console.error("Project data not found for:", projectId);
+                        alert("Project data not available. Please try another project.");
+                    }
+                });
+            });
+            
+            // Event listener untuk close modal
+            document.querySelector('.close-modal').addEventListener('click', function(e) {
+                e.stopPropagation();
+                closeProjectModal();
+            });
+            
+            // Event listener untuk menutup modal saat klik di luar konten
+            document.getElementById('projectModal').addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeProjectModal();
+                }
+            });
+            
+            // Event listener untuk form kontak
+            const contactForm = document.getElementById('contactForm');
+            if (contactForm) {
+                contactForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    alert('Thank you for your message! I will get back to you soon.');
+                    this.reset();
+                });
+            }
+            
+            // Mobile menu toggle
+            const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (mobileMenuBtn) {
+                mobileMenuBtn.addEventListener('click', function() {
+                    navLinks.classList.toggle('active');
+                });
+            }
+            
+            // Smooth scroll untuk navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        e.preventDefault();
+                        
+                        // Tutup mobile menu jika terbuka
+                        if (window.innerWidth <= 768) {
+                            navLinks.classList.remove('active');
+                        }
+                        
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 100,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Previous/Next buttons untuk carousel
             document.querySelector('.prev-btn').addEventListener('click', function(e) {
                 e.stopPropagation();
                 prevSlide();
@@ -1813,9 +1900,26 @@
                 carousel.addEventListener('mouseleave', startAutoSlide);
             }
             
-            // ... rest of your existing event listeners
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.padding = '15px 0';
+                    header.style.backgroundColor = 'rgba(10, 10, 10, 0.98)';
+                } else {
+                    header.style.padding = '25px 0';
+                    header.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
+                }
+            });
+            
+            console.log("All event listeners initialized!");
         });
+
+        // Fungsi untuk testing
+        function testModal() {
+            console.log("Testing modal...");
+            openProjectModal('project1');
+        }
     </script>
 </body>
-
 </html>
