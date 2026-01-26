@@ -1183,7 +1183,7 @@
     <section id="home" class="hero">
         <div class="container hero-container">
             <div class="hero-content">
-                <h1>UNLEASH YOUR <span>DESIRE</span></h1>
+                <h1>DRIVEN BY <span>PASSION</span></h1>
                 <p>Saya adalah Lulusan <span class="highlight">Manajemen Informatika</span> yang memiliki ketertarikan pada pengelolaan sistem informasi dan pengolahan data. Terbiasa bekerja secara terstruktur dalam dokumentasi dan pengarsipan, serta menggabungkan pemahaman teknologi dengan kebutuhan kerja administratif untuk menghasilkan solusi yang rapi dan fungsional.</p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn"><i class="fas fa-fire"></i> EXPLORE WORK</a>
@@ -1258,18 +1258,18 @@
             <div class="skills-grid">
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-database"></i></div>
-                    <h3>Data Management</h3>
-                    <p>Spesialis dalam pengelolaan dan pengolahan data dengan pendekatan terstruktur untuk menghasilkan informasi yang akurat dan mudah diakses.</p>
+                    <h3>Frontend Web Development</h3>
+                    <p>Membangun tampilan website menggunakan HTML, CSS, dan JavaScript dengan fokus pada struktur yang rapi, tampilan menarik, dan pengalaman pengguna yang baik.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-code"></i></div>
-                    <h3>System Development</h3>
-                    <p>Mengembangkan sistem informasi yang fungsional dengan fokus pada usability, scalability, dan maintainability.</p>
+                    <h3>Responsive Web Design</h3>
+                    <p>Membuat website yang dapat beradaptasi dengan baik di berbagai ukuran layar, mulai dari desktop hingga perangkat mobile.</p>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="fas fa-file-alt"></i></div>
-                    <h3>Documentation</h3>
-                    <p>Ahli dalam pembuatan dokumentasi sistem yang jelas, lengkap, dan mudah dipahami oleh berbagai stakeholders.</p>
+                    <h3>Version Control (Git & GitHub)</h3>
+                    <p>Mengelola dan menyimpan kode menggunakan Git dan GitHub untuk mempermudah pembaruan, kolaborasi, dan dokumentasi proyek.</p>
                 </div>
             </div>
         </div>
@@ -1291,12 +1291,12 @@
                         </div>
                     </div>
                     <div class="project-content">
-                        <h3>Data Analytics Dashboard</h3>
-                        <p>Sistem dashboard untuk visualisasi data dengan interface yang informatif dan mudah dipahami.</p>
+                        <h3>Perpus Digital DPRD Prov Jabar</h3>
+                        <p>Website perpustakaan digital yang menampilkan informasi koleksi dan layanan dengan desain yang rapi, responsif, dan mudah diakses oleh pengguna.</p>
                         <div class="project-tags">
-                            <span class="tag">Data Analysis</span>
-                            <span class="tag">Dashboard</span>
-                            <span class="tag">Visualization</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">HTML + CSS</span>
+                            <span class="tag">MySQL</span>
                         </div>
                     </div>
                 </div>
@@ -1375,23 +1375,21 @@
                     </div>
                 </div>
                 
-                <div class="contact-form">
-                    <h3 style="margin-bottom: 25px; font-size: 1.8rem; color: var(--light);">SEND A MESSAGE</h3>
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <input type="text" placeholder="YOUR NAME" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="YOUR EMAIL" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea rows="6" placeholder="YOUR MESSAGE..." required></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="width: 100%;">
-                            <i class="fas fa-paper-plane"></i> SEND MESSAGE
-                        </button>
-                    </form>
-                </div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="YOUR NAME" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="YOUR EMAIL" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="6" placeholder="YOUR MESSAGE..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">
+                        <i class="fas fa-paper-plane"></i> SEND MESSAGE
+                    </button>
+                </form>
+
             </div>
         </div>
     </section>
@@ -1920,6 +1918,26 @@
             console.log("Testing modal...");
             openProjectModal('project1');
         }
+
+        // pesan langsung ke WA
+        document.getElementById("contactForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const phoneNumber = "6281222798436"; // GANTI nomor kamu (tanpa +)
+
+            const text = `Hello, my name is ${name}
+        Email: ${email}
+
+        ${message}`;
+
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+
+            window.open(whatsappURL, "_blank");
+        });
     </script>
 </body>
 </html>
