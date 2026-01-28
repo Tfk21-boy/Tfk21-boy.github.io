@@ -211,6 +211,128 @@
         </div>
     </section>
 
+    <!-- Certificates Section -->
+    <section id="certificates" class="certificates-section">
+        <div class="container">
+            <h2 class="section-title">MY <span>CERTIFICATES</span></h2>
+            <p class="section-subtitle" style="text-align: center; color: var(--accent); margin-bottom: 60px; font-size: 1.2rem;">
+                Dokumentasi pencapaian dan pengakuan kompetensi
+            </p>
+            
+            <div class="certificates-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card" data-certificate="cert1">
+                    <div class="certificate-img" style="background-image: url('sertifikat1.jpg'); background-size: cover; background-position: center;">
+                        <div class="certificate-badge">📜</div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Google Data Analytics</h3>
+                        <div class="certificate-info">
+                            <span class="cert-issuer">Google</span>
+                            <span class="cert-date">2024</span>
+                        </div>
+                        <div class="certificate-tags">
+                            <span class="cert-tag">Data Analysis</span>
+                            <span class="cert-tag">SQL</span>
+                            <span class="cert-tag">Visualization</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 2 -->
+                <div class="certificate-card" data-certificate="cert2">
+                    <div class="certificate-img">
+                        <i class="fas fa-code"></i>
+                        <div class="certificate-badge">🎓</div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>Full Stack Development</h3>
+                        <div class="certificate-info">
+                            <span class="cert-issuer">Dicoding</span>
+                            <span class="cert-date">2023</span>
+                        </div>
+                        <div class="certificate-tags">
+                            <span class="cert-tag">JavaScript</span>
+                            <span class="cert-tag">React</span>
+                            <span class="cert-tag">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Certificate 3 -->
+                <div class="certificate-card" data-certificate="cert3">
+                    <div class="certificate-img">
+                        <i class="fas fa-database"></i>
+                        <div class="certificate-badge">🏆</div>
+                    </div>
+                    <div class="certificate-content">
+                        <h3>SQL Mastery</h3>
+                        <div class="certificate-info">
+                            <span class="cert-issuer">Udemy</span>
+                            <span class="cert-date">2023</span>
+                        </div>
+                        <div class="certificate-tags">
+                            <span class="cert-tag">Database</span>
+                            <span class="cert-tag">MySQL</span>
+                            <span class="cert-tag">Query</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificate Modal -->
+    <div id="certificateModal" class="certificate-modal">
+        <div class="cert-modal-content">
+            <button class="cert-close-modal">&times;</button>
+            
+            <div class="cert-modal-header">
+                <div class="cert-modal-image" id="certModalImage">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="cert-modal-title">
+                    <h2 id="certModalTitle">Certificate Title</h2>
+                    <div class="cert-modal-info">
+                        <div class="cert-info-item">
+                            <i class="fas fa-building"></i>
+                            <span id="certModalIssuer">Issuer</span>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span id="certModalDate">Date</span>
+                        </div>
+                        <div class="cert-info-item">
+                            <i class="fas fa-id-card"></i>
+                            <span id="certModalId">ID: -</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cert-modal-body">
+                <div class="cert-modal-section">
+                    <h3><i class="fas fa-info-circle"></i> Description</h3>
+                    <p id="certModalDescription">Certificate description will appear here.</p>
+                </div>
+                
+                <div class="cert-modal-section">
+                    <h3><i class="fas fa-check-circle"></i> Skills Acquired</h3>
+                    <div class="cert-skills" id="certModalSkills">
+                        <!-- Skills will appear here -->
+                    </div>
+                </div>
+                
+                <div class="cert-modal-section">
+                    <h3><i class="fas fa-external-link-alt"></i> Links</h3>
+                    <div class="cert-links" id="certModalLinks">
+                        <!-- Links will appear here -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Contact Section -->
     <section id="contact">
         <div class="container">

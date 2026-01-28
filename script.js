@@ -118,6 +118,156 @@
             }
         };
 
+        // ========== CERTIFICATES DATA ==========
+        const certificates = {
+            cert1: {
+                title: "Google Data Analytics Professional Certificate",
+                issuer: "Google",
+                date: "June 2024",
+                credentialId: "ABC123XYZ",
+                description: "Professional certificate covering the entire data analytics process including data cleaning, analysis, visualization, and using R programming, SQL, and Tableau.",
+                skills: [
+                    "Data Analysis",
+                    "SQL & Database Management", 
+                    "Data Visualization",
+                    "R Programming",
+                    "Statistical Analysis",
+                    "Business Intelligence"
+                ],
+                links: [
+                    { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" },
+                    { text: "Verify Credential", url: "#", icon: "fas fa-shield-check" }
+                ],
+                image: "ser/sr1.jpg" // GANTI dengan gambar sertifikat kamu
+            },
+            cert2: {
+                title: "Full Stack JavaScript Developer",
+                issuer: "Dicoding Indonesia", 
+                date: "March 2023",
+                credentialId: "DICO-789456",
+                description: "Comprehensive full-stack development certification covering frontend, backend, databases, and deployment using modern JavaScript stack.",
+                skills: [
+                    "JavaScript ES6+",
+                    "React & Vue.js",
+                    "Node.js & Express",
+                    "MongoDB & MySQL",
+                    "REST API Development",
+                    "Git & Deployment"
+                ],
+                links: [
+                    { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" },
+                    { text: "Course Materials", url: "#", icon: "fas fa-book" }
+                ],
+                image: "sertifikat1.jpg" //
+            },
+            cert3: {
+                title: "SQL Mastery: Complete SQL Bootcamp",
+                issuer: "Udemy",
+                date: "January 2023",
+                credentialId: "UDM-2023-SQL001",
+                description: "Comprehensive SQL training covering from basic queries to advanced database management, optimization, and administration.",
+                skills: [
+                    "SQL Queries & Joins",
+                    "Database Design",
+                    "Query Optimization",
+                    "Stored Procedures",
+                    "Database Security",
+                    "Data Migration"
+                ],
+                links: [
+                    { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" }
+                ],
+                icon: "fas fa-database"
+            },
+            
+        };
+
+        // ========== CERTIFICATE MODAL FUNCTIONS ==========
+        function openCertificateModal(certId) {
+            console.log("Opening certificate modal for:", certId);
+            
+            const certificate = certificates[certId];
+            if (!certificate) {
+                alert("Certificate data not found!");
+                return;
+            }
+            
+            // Update modal content
+            document.getElementById('certModalTitle').textContent = certificate.title;
+            document.getElementById('certModalIssuer').textContent = certificate.issuer;
+            document.getElementById('certModalDate').textContent = certificate.date;
+            document.getElementById('certModalId').textContent = `ID: ${certificate.credentialId}`;
+            document.getElementById('certModalDescription').textContent = certificate.description;
+            
+            // Update icon
+            const imageContainer = document.getElementById('certModalImage');
+            imageContainer.innerHTML = `<i class="${certificate.icon}"></i>`;
+            
+            // Update skills
+            const skillsContainer = document.getElementById('certModalSkills');
+            skillsContainer.innerHTML = '';
+            certificate.skills.forEach(skill => {
+                const skillEl = document.createElement('span');
+                skillEl.className = 'cert-skill';
+                skillEl.textContent = skill;
+                skillsContainer.appendChild(skillEl);
+            });
+            
+            // Update links
+            const linksContainer = document.getElementById('certModalLinks');
+            linksContainer.innerHTML = '';
+            certificate.links.forEach(link => {
+                const linkEl = document.createElement('a');
+                linkEl.href = link.url || '#';
+                linkEl.className = 'cert-link';
+                linkEl.target = '_blank';
+                linkEl.innerHTML = `<i class="${link.icon}"></i> ${link.text}`;
+                linksContainer.appendChild(linkEl);
+            });
+            
+            // Show modal
+            document.getElementById('certificateModal').style.display = 'block';
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeCertificateModal() {
+            document.getElementById('certificateModal').style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        // ========== UPDATE EVENT LISTENERS ==========
+        // Dalam DOMContentLoaded function, tambahkan:
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // ... existing code ...
+            
+            // ========== CERTIFICATE CARDS ==========
+            document.querySelectorAll('.certificate-card').forEach(card => {
+                card.addEventListener('click', function() {
+                    const certId = this.getAttribute('data-certificate');
+                    openCertificateModal(certId);
+                });
+                
+                card.style.cursor = 'pointer';
+            });
+            
+            // Certificate modal close
+            document.querySelector('.cert-close-modal').addEventListener('click', closeCertificateModal);
+            document.getElementById('certificateModal').addEventListener('click', function(e) {
+                if (e.target === this) closeCertificateModal();
+            });
+            
+            // Escape key for certificate modal
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    closeCertificateModal();
+                    closeProjectModal(); // Close both modals
+                }
+            });
+            
+            // ... rest of existing code ...
+        });
+
         // Carousel State
         let currentCarouselState = {
             currentSlide: 0,
