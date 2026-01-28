@@ -138,8 +138,6 @@
         </div>
     </section>
 
-
-
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
@@ -219,62 +217,66 @@
                 Dokumentasi pencapaian dan pengakuan kompetensi
             </p>
             
-            <div class="certificates-grid">
+            <div class="projects-grid">
                 <!-- Certificate 1 -->
-                <div class="certificate-card" data-certificate="cert1">
-                    <div class="certificate-img" style="background-image: url('sertifikat1.jpg'); background-size: cover; background-position: center;">
-                        <div class="certificate-badge">📜</div>
+                <div class="project-card" data-certificate="cert1">
+                    <div class="project-img">
+                        <div class="project-img-content" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('ser/sr1.jpg'); background-size: cover; background-position: center;">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="image-count">
+                            <i class="fas fa-certificate"></i> Certificate
+                        </div>
                     </div>
-                    <div class="certificate-content">
+                    <div class="project-content">
                         <h3>Google Data Analytics</h3>
-                        <div class="certificate-info">
-                            <span class="cert-issuer">Google</span>
-                            <span class="cert-date">2024</span>
-                        </div>
-                        <div class="certificate-tags">
-                            <span class="cert-tag">Data Analysis</span>
-                            <span class="cert-tag">SQL</span>
-                            <span class="cert-tag">Visualization</span>
+                        <p>Professional certificate covering the entire data analytics process including data cleaning, analysis, visualization, and using R programming, SQL, and Tableau.</p>
+                        <div class="project-tags">
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Visualization</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Certificate 2 -->
-                <div class="certificate-card" data-certificate="cert2">
-                    <div class="certificate-img">
-                        <i class="fas fa-code"></i>
-                        <div class="certificate-badge">🎓</div>
-                    </div>
-                    <div class="certificate-content">
-                        <h3>Full Stack Development</h3>
-                        <div class="certificate-info">
-                            <span class="cert-issuer">Dicoding</span>
-                            <span class="cert-date">2023</span>
+                <div class="project-card" data-certificate="cert2">
+                    <div class="project-img">
+                        <div class="project-img-content" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('ser/sr2.jpeg'); background-size: cover; background-position: center;">
+                            <i class="fas fa-award"></i>
                         </div>
-                        <div class="certificate-tags">
-                            <span class="cert-tag">JavaScript</span>
-                            <span class="cert-tag">React</span>
-                            <span class="cert-tag">Node.js</span>
+                        <div class="image-count">
+                            <i class="fas fa-certificate"></i> Certificate
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Full Stack JavaScript Developer</h3>
+                        <p>Comprehensive full-stack development certification covering frontend, backend, databases, and deployment using modern JavaScript stack.</p>
+                        <div class="project-tags">
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">React</span>
+                            <span class="tag">Node.js</span>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Certificate 3 -->
-                <div class="certificate-card" data-certificate="cert3">
-                    <div class="certificate-img">
-                        <i class="fas fa-database"></i>
-                        <div class="certificate-badge">🏆</div>
-                    </div>
-                    <div class="certificate-content">
-                        <h3>SQL Mastery</h3>
-                        <div class="certificate-info">
-                            <span class="cert-issuer">Udemy</span>
-                            <span class="cert-date">2023</span>
+                <div class="project-card" data-certificate="cert3">
+                    <div class="project-img">
+                        <div class="project-img-content" style="background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('ser/sr3.jpg'); background-size: cover; background-position: center;">
+                            <i class="fas fa-award"></i>
                         </div>
-                        <div class="certificate-tags">
-                            <span class="cert-tag">Database</span>
-                            <span class="cert-tag">MySQL</span>
-                            <span class="cert-tag">Query</span>
+                        <div class="image-count">
+                            <i class="fas fa-certificate"></i> Certificate
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>SQL Mastery: Complete SQL Bootcamp</h3>
+                        <p>Comprehensive SQL training covering from basic queries to advanced database management, optimization, and administration.</p>
+                        <div class="project-tags">
+                            <span class="tag">Database</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Query</span>
                         </div>
                     </div>
                 </div>
@@ -283,51 +285,24 @@
     </section>
 
     <!-- Certificate Modal -->
-    <div id="certificateModal" class="certificate-modal">
-        <div class="cert-modal-content">
-            <button class="cert-close-modal">&times;</button>
+    <div id="certificateModal" class="modal">
+        <div class="modal-content cert-modal-content">
+            <span class="cert-close-modal">&times;</span>
             
-            <div class="cert-modal-header">
-                <div class="cert-modal-image" id="certModalImage">
-                    <i class="fas fa-award"></i>
-                </div>
-                <div class="cert-modal-title">
-                    <h2 id="certModalTitle">Certificate Title</h2>
-                    <div class="cert-modal-info">
-                        <div class="cert-info-item">
-                            <i class="fas fa-building"></i>
-                            <span id="certModalIssuer">Issuer</span>
-                        </div>
-                        <div class="cert-info-item">
-                            <i class="fas fa-calendar-alt"></i>
-                            <span id="certModalDate">Date</span>
-                        </div>
-                        <div class="cert-info-item">
-                            <i class="fas fa-id-card"></i>
-                            <span id="certModalId">ID: -</span>
-                        </div>
-                    </div>
+            <div class="modal-header">
+                <h2 id="certModalTitle">Certificate Title</h2>
+                <div class="certificate-meta">
+                    <span id="certModalIssuer" class="cert-issuer">Issuer</span>
+                    <span id="certModalDate" class="cert-date">Date</span>
+                    <span id="certModalId" class="cert-id">ID: ABC123</span>
                 </div>
             </div>
             
-            <div class="cert-modal-body">
-                <div class="cert-modal-section">
-                    <h3><i class="fas fa-info-circle"></i> Description</h3>
-                    <p id="certModalDescription">Certificate description will appear here.</p>
-                </div>
-                
-                <div class="cert-modal-section">
-                    <h3><i class="fas fa-check-circle"></i> Skills Acquired</h3>
-                    <div class="cert-skills" id="certModalSkills">
-                        <!-- Skills will appear here -->
-                    </div>
-                </div>
-                
-                <div class="cert-modal-section">
-                    <h3><i class="fas fa-external-link-alt"></i> Links</h3>
-                    <div class="cert-links" id="certModalLinks">
-                        <!-- Links will appear here -->
-                    </div>
+            <!-- Links -->
+            <div class="modal-section">
+                <h3 class="modal-section-title">Certificate Links</h3>
+                <div id="certModalLinks" class="project-links">
+                    <!-- links akan ditampilkan di sini -->
                 </div>
             </div>
         </div>
@@ -376,7 +351,6 @@
                         <i class="fas fa-paper-plane"></i> SEND MESSAGE
                     </button>
                 </form>
-
             </div>
         </div>
     </section>
@@ -436,26 +410,9 @@
                 </div>
             </div>
             
+            <!-- Modal Body yang Diperbaiki -->
             <div class="modal-body">
-                <div class="modal-section">
-                    <h3><i class="fas fa-bullseye"></i> Overview</h3>
-                    <p id="modalProjectOverview">Project overview will appear here.</p>
-                </div>
-                
-                <div class="modal-section">
-                    <h3><i class="fas fa-tools"></i> Technologies Used</h3>
-                    <div class="tech-stack" id="modalProjectTech">
-                        <!-- Tech stack akan dimuat di sini -->
-                    </div>
-                </div>
-                
-                <div class="modal-section">
-                    <h3><i class="fas fa-tasks"></i> Key Features</h3>
-                    <ul id="modalProjectFeatures">
-                        <!-- Features akan dimuat di sini -->
-                    </ul>
-                </div>
-                
+                <!-- Links Section -->
                 <div class="modal-section">
                     <h3><i class="fas fa-link"></i> Live Links</h3>
                     <div class="project-links" id="modalProjectLinks">
