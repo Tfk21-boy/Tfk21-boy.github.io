@@ -1,7 +1,7 @@
 // Projects Data
 const projects = {
     project1: {
-        title: "Data Analytics Dashboard",
+        title: "Perpus Digital DPRD Provinsi Jawa Barat",
         images: [
             {
                 url: "img/pr1.png",
@@ -24,14 +24,14 @@ const projects = {
                 description: "User management panel"
             }
         ],
-        tags: ["Data Analysis", "Dashboard", "Visualization", "Business Intelligence"],
+        tags: ["Database", "Dashboard", "Visualization", "Bootstrap"],
         links: [
             { text: "Live Demo", url: "#", icon: "fas fa-external-link-alt" },
             { text: "GitHub", url: "#", icon: "fab fa-github" }
         ]
     },
     project2: {
-        title: "Document Management System",
+        title: "Landing page Agency Studio Musik",
         images: [
             {
                 url: "img2/lp1.png",
@@ -54,13 +54,13 @@ const projects = {
                 description: "Audit trail dan version history"
             }
         ],
-        tags: ["Documentation", "Management", "System", "Archive"],
+        tags: ["Documentation", "Modern Web Design", "System", "Archive"],
         links: [
             { text: "Case Study", url: "https://tfk21-boy.github.io/https-Tfk21-boy.github.io-desire-audio--/", icon: "fas fa-file-alt" }
         ]
     },
     project3: {
-        title: "Workflow Automation System",
+        title: "Dashboard Etalase Album Musik",
         images: [
             {
                 url: "img3/ds1.png",
@@ -94,37 +94,37 @@ const projects = {
 // ========== CERTIFICATES DATA ==========
 const certificates = {
     cert1: {
-        title: "Google Data Analytics Professional Certificate",
-        issuer: "Google",
-        date: "June 2024",
+        title: "Sertifikat PKL",
+        issuer: "DPRD Provinsi Jawa Barat",
+        date: "Januari 2025",
         credentialId: "ABC123XYZ",
-        description: "Professional certificate covering the entire data analytics process including data cleaning, analysis, visualization, and using R programming, SQL, and Tableau.",
+        description: "Diberikan oleh Sekretariat DPRD Provinsi Jawa Barat atas penyelesaian Praktik Kerja Lapangan selama ±3 bulan, dengan fokus pada kegiatan administrasi perkantoran, dokumentasi rapat, dan pengelolaan arsip pendukung laporan.",
         links: [
-            { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" },
-            { text: "Verify Credential", url: "#", icon: "fas fa-shield-check" }
+            { text: "View Certificate", url: ".", icon: "fas fa-external-link-alt" },
+            { text: "Verify Credential", url: ".", icon: "fas fa-shield-check" }
         ],
         image: "ser/sr1.jpg"
     },
     cert2: {
-        title: "Full Stack JavaScript Developer",
-        issuer: "Dicoding Indonesia", 
-        date: "March 2023",
+        title: "Sertifikat TEOIC",
+        issuer: "Politeknik Piksi Ganesha", 
+        date: "Desembeer 2025",
         credentialId: "DICO-789456",
-        description: "Comprehensive full-stack development certification covering frontend, backend, databases, and deployment using modern JavaScript stack.",
+        description: "Sertifikat TOEIC (Test of English for International Communication) yang menunjukkan kemampuan bahasa Inggris tingkat menengah dalam konteks profesional, dengan skor 563, mencakup pemahaman komunikasi tertulis dan lisan di lingkungan kerja.",
         links: [
-            { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" },
-            { text: "Course Materials", url: "#", icon: "fas fa-book" }
+            { text: "View Certificate", url: "", icon: "fas fa-external-link-alt" },
+            { text: "Course Materials", url: "", icon: "fas fa-book" }
         ],
         image: "ser/sr2.jpeg"
     },
     cert3: {
-        title: "SQL Mastery: Complete SQL Bootcamp",
-        issuer: "Udemy",
-        date: "January 2023",
-        credentialId: "UDM-2023-SQL001",
-        description: "Comprehensive SQL training covering from basic queries to advanced database management, optimization, and administration.",
+        title: "Sertificate Mini Course RevoU",
+        issuer: "RevoU",
+        date: "November 2025",
+        credentialId: "2025-RVU-SQL-001",
+        description: "Sertifikat Introduction to Data Analytics yang diterbitkan oleh RevoU, sebagai bukti telah menyelesaikan program pengenalan analisis data, mencakup pemahaman dasar pengolahan data, interpretasi data, dan penggunaan data untuk mendukung pengambilan keputusan.",
         links: [
-            { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" }
+            { text: "View Certificate", url: "", icon: "fas fa-external-link-alt" }
         ],
         image: "ser/sr3.jpg"
     }
@@ -146,16 +146,16 @@ function openCertificateModal(certId) {
         const issuerElement = document.getElementById('certModalIssuer');
         const dateElement = document.getElementById('certModalDate');
         const idElement = document.getElementById('certModalId');
-        const descElement = document.getElementById('certModalDescription');
-        const imageElement = document.getElementById('certModalImage');
+        const descElement = document.getElementById('certModalDescription'); // INI ELEMEN BARU
         
         if (titleElement) titleElement.textContent = certificate.title;
         if (issuerElement) issuerElement.textContent = certificate.issuer;
         if (dateElement) dateElement.textContent = certificate.date;
         if (idElement) idElement.textContent = `ID: ${certificate.credentialId}`;
-        if (descElement) descElement.textContent = certificate.description;
+        if (descElement) descElement.textContent = certificate.description; // UPDATE DISINI
         
         // Tampilkan gambar
+        const imageElement = document.getElementById('certModalImage');
         if (imageElement) {
             if (certificate.image) {
                 imageElement.src = certificate.image;
