@@ -124,7 +124,7 @@ const certificates = {
         credentialId: "UDM-2023-SQL001",
         description: "Comprehensive SQL training covering from basic queries to advanced database management, optimization, and administration.",
         links: [
-            { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" }
+            { text: "View Certificate", url: "file:///D:/Sertif/DAMC_mmtaufik20@gmail.com_DAMC-17112025-01-1-00436.pdf", icon: "fas fa-external-link-alt" }
         ],
         image: "ser/sr3.jpg"
     }
@@ -147,6 +147,7 @@ function openCertificateModal(certId) {
         const dateElement = document.getElementById('certModalDate');
         const idElement = document.getElementById('certModalId');
         const descElement = document.getElementById('certModalDescription');
+        const imageElement = document.getElementById('certModalImage');
         
         if (titleElement) titleElement.textContent = certificate.title;
         if (issuerElement) issuerElement.textContent = certificate.issuer;
@@ -155,7 +156,6 @@ function openCertificateModal(certId) {
         if (descElement) descElement.textContent = certificate.description;
         
         // Tampilkan gambar
-        const imageElement = document.getElementById('certModalImage');
         if (imageElement) {
             if (certificate.image) {
                 imageElement.src = certificate.image;
@@ -441,38 +441,24 @@ function closeProjectModal() {
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Portfolio loaded successfully!");
     
-    // Event listeners untuk project cards
+    // Event listeners untuk SEMUA project cards (baik projects maupun certificates)
     document.querySelectorAll('.project-card').forEach(card => {
         card.addEventListener('click', function(e) {
             e.preventDefault();
             e.stopPropagation();
             
             const projectId = this.getAttribute('data-project');
-            console.log("Project clicked:", projectId);
+            const certId = this.getAttribute('data-certificate');
             
             if (projectId && projects[projectId]) {
+                console.log("Project clicked:", projectId);
                 openProjectModal(projectId);
-            } else {
-                console.error("Project data not found for:", projectId);
-                alert("Project data not available. Please try another project.");
-            }
-        });
-    });
-    
-    // ========== CERTIFICATE CARDS ==========
-    document.querySelectorAll('.certificate-card').forEach(card => {
-        card.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const certId = this.getAttribute('data-certificate');
-            console.log("Certificate clicked:", certId);
-            
-            if (certId && certificates[certId]) {
+            } else if (certId && certificates[certId]) {
+                console.log("Certificate clicked:", certId);
                 openCertificateModal(certId);
             } else {
-                console.error("Certificate data not found for:", certId);
-                alert("Certificate data not available. Please try another certificate.");
+                console.error("Data not found for element:", this);
+                alert("Content not available. Please try another item.");
             }
         });
         
@@ -606,30 +592,32 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // WhatsApp Form
-const whatsappForm = document.getElementById("contactForm");
-if (whatsappForm) {
-    whatsappForm.addEventListener("submit", function(e) {
-        e.preventDefault();
+document.addEventListener('DOMContentLoaded', function() {
+    const whatsappForm = document.getElementById("contactForm");
+    if (whatsappForm) {
+        whatsappForm.addEventListener("submit", function(e) {
+            e.preventDefault();
 
-        const name = document.getElementById("name");
-        const email = document.getElementById("email");
-        const message = document.getElementById("message");
-        
-        if (!name || !email || !message) {
-            alert("Please fill in all fields!");
-            return;
-        }
+            const name = document.getElementById("name");
+            const email = document.getElementById("email");
+            const message = document.getElementById("message");
+            
+            if (!name || !email || !message) {
+                alert("Please fill in all fields!");
+                return;
+            }
 
-        const phoneNumber = "6281222798436";
-        const text = `Hello, my name is ${name.value}
+            const phoneNumber = "6281222798436";
+            const text = `Hello, my name is ${name.value}
 Email: ${email.value}
 
 ${message.value}`;
 
-        const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
-        window.open(whatsappURL, "_blank");
-    });
-}
+            const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
+            window.open(whatsappURL, "_blank");
+        });
+    }
+});
 
 // Fungsi untuk testing
 function testProjectModal() {
