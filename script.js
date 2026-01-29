@@ -124,7 +124,7 @@ const certificates = {
         credentialId: "UDM-2023-SQL001",
         description: "Comprehensive SQL training covering from basic queries to advanced database management, optimization, and administration.",
         links: [
-            { text: "View Certificate", url: "file:///D:/Sertif/DAMC_mmtaufik20@gmail.com_DAMC-17112025-01-1-00436.pdf", icon: "fas fa-external-link-alt" }
+            { text: "View Certificate", url: "#", icon: "fas fa-external-link-alt" }
         ],
         image: "ser/sr3.jpg"
     }
